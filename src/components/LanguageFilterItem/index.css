@@ -1,0 +1,33 @@
+.li-filter-items {
+  list-style-type: none;
+  margin-right: 5px;
+}
+
+.btn-item {
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.active-btn {
+  border: #0284c7 1px solid;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  padding: 5px;
+  color: #0284c7;
+}
+
+@media screen and (min-width: 768px) {
+  .li-filter-items {
+    margin-right: 30px;
+  }
+  .btn-item {
+    font-size: 20px;
+  }
+  .active-btn {
+    padding: 10px;
+    border-radius: 15px;
+  }
+}
