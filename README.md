@@ -1,7 +1,3 @@
-In this project, let's build a **Github Popular Repos** by applying the concepts we have learned till now.
-
-### Refer to the images below:
-
  <br/>
  <div style="text-align: center;">
      <img src="https://assets.ccbp.in/frontend/content/react-js/github-popular-repos-output.gif" alt="github popular repos output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
@@ -26,46 +22,6 @@ In this project, let's build a **Github Popular Repos** by applying the concepts
 - [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Failure](https://assets.ccbp.in/frontend/content/react-js/github-repos-error-view-lg-output.png)
 
 </details>
-
-### Set Up Instructions
-
-<details>
-<summary>Click to view</summary>
-
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
-
-### Completion Instructions
-
-<details>
-<summary>Functionality to be added</summary>
-<br/>
-
-The app must have the following functionalities
-
-- When the app is opened initially,
-
-  - An HTTP GET request should be made to **githubReposApiUrl** with query parameter as `language` and its initial value as `ALL`
-  - **_loader_** should be displayed while fetching the data
-  - After the data is fetched successfully, display the repositories list received in the response
-
-- When a language filter is active
-
-  - An HTTP GET request should be made to the above-mentioned URL with the `id` of the active language
-  - **_loader_** should be displayed while fetching the data
-  - After the data is fetched successfully, display the repositories list received in the response
-
-- The `GithubPopularRepos` component is provided with `languageFiltersData`. It consists of a list of language filter objects with the following properties in each language filter object
-
-  |   Key    | Data Type |
-  | :------: | :-------: |
-  |    id    |  String   |
-  | language |  String   |
-
-</details>
-
-<details>
 
 <summary>API Requests & Responses</summary>
 <br>
@@ -113,60 +69,6 @@ Returns a response containing the list of repositories
 
 </details>
 
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
-
-- `src/components/GithubPopularRepos/index.js`
-- `src/components/GithubPopularRepos/index.css`
-- `src/components/LanguageFilterItem/index.js`
-- `src/components/LanguageFilterItem/index.css`
-- `src/components/RepositoryItem/index.js`
-- `src/components/RepositoryItem/index.css`
-</details>
-
-### Quick Tips
-
-<details close>
-<summary>Click to view</summary>
-<br>
-
-- To display the animated loader, we need to import the `Loader` component using the below statement
-
-  ```jsx
-  import Loader from 'react-loader-spinner'
-  ```
-
-- In order to display the given animated loader, pass the `type` and `color` props to the `Loader` component with values as **ThreeDots** and **#0284c7**, respectively
-
-  ```jsx
-  <Loader type="ThreeDots" color="#0284c7" height={80} width={80} />
-  ```
-
-    <br/>  
-  </details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- Wrap the `Loader` component with an HTML container element and add the `data-testid` attribute value as **loader** to it
-
-  ```jsx
-  <div data-testid="loader">
-    <Loader type="ThreeDots" color="#0284c7" height={80} width={80} />
-  </div>
-  ```
-
-</details>
-
 ### Resources
 
 <details>
@@ -200,10 +102,3 @@ Use these files to complete the implementation:
 - Lobster
 
 </details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
